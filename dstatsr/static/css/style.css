@@ -1,5 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Ubuntu&display=swap');
 
+.btn-unete {
+    height: 44px;
+	width: 208px;
+	border: 2px solid rgb(250, 235, 223);
+    border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	border-bottom-left-radius: 50px;
+	border-bottom-right-radius: 50px;
+    background-color: rgb(0,0,0,0);
+    font-family: Ubuntu, sans-serif;
+	font-size: 14px;
+    font-weight: 400;
+    transition: all 0.3s ease 0s;
+    justify-content: center;
+}
+
+.btn-unete:hover {
+    background-color: #D56810;
+    border: 2px solid #D56810;
+}
+
+a.nav3-link-a {
+    font-family: Lato, sans-serif;
+	font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    box-sizing: content-box;
+    text-transform: uppercase;
+    width: 20%;
+    text-decoration: none;
+    color: #E7E9EF;
+}
+
+div.nav3-link-container {
+    text-align: center;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+}
+
+div.nav3-link-container:hover {
+    border-bottom: 3px solid #ebb487;
+    color: #ebb487;
+}
+
 div.index-head {
     text-align: left;
 }
@@ -67,4 +111,21 @@ h3.dato {
     font-style: normal;
     font-size: 40px;
     color: #d6670f;
+}
+
+div.fact-card {
+    background-color: #F7F7F8;
+    border-radius: 15px;
+}
+
+div.separador {
+    margin: 40px 0px;
+    border: 1px solid;
+    border-color: #CED4DA;
+    height: 2px;
+    box-sizing: border-box;
+}
+
+.menu-pais-link {
+    text-decoration: none;
 }

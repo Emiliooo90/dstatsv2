@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="container">
-    <div id="indexHeader" class="align-items-center justify-content-center row"
+    <div id="index-header" class="align-items-center justify-content-center row"
         style="padding-top: 40px; padding-bottom: 40px;">
         <div class="col-auto">
             <h1 class="main-header">D-Stats</h1>
@@ -16,7 +16,148 @@
                 sus principales productos y socios comerciales.</p>
         </div>
     </div>
-
+    <div class="row">
+        <div class="col-md-3 mb-3">
+            <div class="card text-center border-light fact-card">
+                <div class="card-body" style="padding: 40px 16px;">
+                    <h3 class="titulo">Card title</h3>
+                    <h3 class="dato">1234</h3>
+                    <p class="specialText2">Card subtitle</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card text-center border-light fact-card">
+                <div class="card-body" style="padding: 40px 16px;">
+                    <h3 class="titulo">Card title</h3>
+                    <h3 class="dato">1234</h3>
+                    <p class="specialText2">Card subtitle</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card text-center border-light fact-card">
+                <div class="card-body" style="padding: 40px 16px;">
+                    <h3 class="titulo">Card title</h3>
+                    <h3 class="dato">1234</h3>
+                    <p class="specialText2">Card subtitle</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card text-center border-light fact-card">
+                <div class="card-body" style="padding: 40px 16px;">
+                    <h3 class="titulo">Card title</h3>
+                    <h3 class="dato">1234</h3>
+                    <p class="specialText2">Card subtitle</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="separador"></div>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h1 class="section-header text-center">Principales economías mundiales</h1>
+            <div>Selector</div>
+            <div class="separador"></div>
+            <div>Texto descriptivo</div>
+            <div>Gráfico</div>
+        </div>
+    </div>
+    <div class="separador"></div>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h1 class="section-header text-center">Productos más comerciado</h1>
+            <div>Selector</div>
+            <div>Gráfico</div>
+        </div>
+    </div>
+    <div class="separador" id="seccion_perfil"></div>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h1 class="section-header text-center">Perfil del País</h1>
+            <h2 class="bajada text-center">Explora las principales cifras e indicadores por país</h2>
+        <div class="col-8">
+            <div id="selector-continente" class="btn-group" role="group" aria-label="Continentes">
+                <button type="button" data-cont=352 class="btn btn-secondary active">Africa</button>
+                <button type="button" data-cont=353 class="btn btn-secondary">Asia</button>
+                <button type="button" data-cont=354 class="btn btn-secondary">Oceania</button>
+                <button type="button" data-cont=355 class="btn btn-secondary">Europa</button>
+                <button type="button" data-cont=359 class="btn btn-secondary">Norteamérica</button>
+                <button type="button" data-cont=357 class="btn btn-secondary">Sudamérica</button>
+                <button type="button" data-cont=356 class="btn btn-secondary">Centroamérica</button>
+            </div>        
+        </div>
+            <div id="menu-paises"></div>
+        </div>
+    </div>
+    <div class="separador" id="seccion_markets"></div>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <h1 class="section-header text-center">Markets</h1>
+            <h2 class="bajada text-center">Analiza las grandes tendencias de consumo globales</h2>
+            <div>Selector markets</div>
+            {% for mkt in listado_markets %}
+            <li><a href="{{ url_for('dstats.markets', mkt=mkt) }}">
+                {{ mkt }}
+            </a>
+            </li>
+            {% endfor %}
+        </div>
+    </div>
 </div>
+<script>
+const paisesPorContinente = JSON.parse({{ listado_pais_cont | tojson }});
 
+document.addEventListener('DOMContentLoaded', function() {
+	const defaultContinentButton = document.querySelector('.btn-group .btn.active');
+	const paisesContainer = document.getElementById('menu-paises');
+	const selectedContinent = defaultContinentButton.getAttribute('data-cont');
+	const paisesSeleccionados = paisesPorContinente[selectedContinent];
+
+	// Mostrar países correspondientes al continente seleccionado por defecto
+	renderPaises(paisesSeleccionados, paisesContainer);
+});
+
+const buttons = document.querySelectorAll('.btn-group .btn');
+buttons.forEach(function(button) {
+	button.addEventListener('click', function() {
+		const selectedContinent = this.getAttribute('data-cont');
+		const paisesSeleccionados = paisesPorContinente[selectedContinent];
+		const paisesContainer = document.getElementById('menu-paises');
+
+		// Limpiar el contenedor de países y generar la nueva lista
+		paisesContainer.innerHTML = '';
+		renderPaises(paisesSeleccionados, paisesContainer);
+
+		// Cambiar el estilo del botón seleccionado
+		buttons.forEach(function(btn) {
+			btn.classList.remove('active');
+		});
+		this.classList.add('active');
+	});
+});
+
+function renderPaises(paises, container) {
+    const defaultContinentButton = document.querySelector('.btn-group .btn.active');
+    const selectedContinent = defaultContinentButton.getAttribute('data-cont');
+	//container.innerHTML = `<h2>Países en el continente de ${selectedContinent}</h2>`;
+	const divContainer = document.createElement('div');
+
+    divContainer.className = 'justify-content-center row'
+
+	paises.forEach(function(pais) {
+		const divPais = document.createElement('div');
+		const link = document.createElement('a');
+		link.href = `/dstats/perfil/${pais.iso_code}`; // URL del país basado en su código ISO alpha
+		link.textContent = pais.pais_name;
+		divPais.appendChild(link);
+		divContainer.appendChild(divPais);
+        divPais.className = 'mb-3 col-md-2 col-sm-3 col-6 text-center'
+        link.className = 'menu-pais-link'
+	});
+
+	container.appendChild(divContainer);
+}
+</script>
 {% endblock %}

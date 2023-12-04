@@ -1,0 +1,217 @@
+location_id;location_code;location_name_short_en;level;parent_id;location_name_short_es;location_code_iso2;flag_icon
+0;ABW;Aruba;country;356;Aruba;AW;circle-flags:aw
+1;AFG;Afghanistan;country;353;Afganistán;AF;circle-flags:af
+2;AGO;Angola;country;352;Angola;AO;circle-flags:ao
+4;ALB;Albania;country;355;Albania;AL;circle-flags:al
+5;AND;Andorra;country;355;Andorra;AD;circle-flags:ad
+7;ARE;United Arab Emirates;country;353;Emiratos Árabes Unidos;AE;circle-flags:ae
+8;ARG;Argentina;country;357;Argentina;AR;circle-flags:ar
+9;ARM;Armenia;country;353;Armenia;AM;circle-flags:am
+10;ASM;American Samoa;country;358;Samoa Americana;AS;circle-flags:as
+13;ATG;Antigua and Barbuda;country;356;Antigua y Barbuda;AG;circle-flags:ag
+14;AUS;Australia;country;354;Australia;AU;circle-flags:au
+15;AUT;Austria;country;355;Austria;AT;circle-flags:at
+16;AZE;Azerbaijan;country;353;Azerbaiyán;AZ;circle-flags:az
+17;BDI;Burundi;country;352;Burundi;BI;circle-flags:bi
+18;BEL;Belgium;country;355;Bélgica;BE;circle-flags:be
+19;BEN;Benin;country;352;Benín;BJ;circle-flags:bj
+21;BFA;Burkina Faso;country;352;Burkina Faso;BF;circle-flags:bf
+22;BGD;Bangladesh;country;353;Bangladesh;BD;circle-flags:bd
+23;BGR;Bulgaria;country;355;Bulgaria;BG;circle-flags:bg
+24;BHR;Bahrain;country;353;Bahrein;BH;circle-flags:bh
+25;BHS;Bahamas;country;356;Bahamas;BS;circle-flags:bs
+26;BIH;Bosnia and Herzegovina;country;355;Bosnia y Herzegovina;BA;circle-flags:ba
+28;BLR;Belarus;country;355;Bielorrusia;BY;circle-flags:by
+29;BLZ;Belize;country;356;Belice;BZ;circle-flags:bz
+30;BMU;Bermuda;country;356;Islas Bermudas;BM;circle-flags:bm
+31;BOL;Bolivia;country;357;Bolivia;BO;circle-flags:bo
+32;BRA;Brazil;country;357;Brasil;BR;circle-flags:br
+33;BRB;Barbados;country;356;Barbados;BB;circle-flags:bb
+34;BRN;Brunei Darussalam;country;353;Brunéi;BN;circle-flags:bn
+35;BTN;Bhutan;country;353;Bhután;BT;circle-flags:bt
+37;BWA;Botswana;country;352;Botsuana;BW;circle-flags:bw
+38;CAF;Central African Republic;country;352;República Centroafricana;CF;circle-flags:cf
+39;CAN;Canada;country;359;Canadá;CA;circle-flags:ca
+41;CHE;Switzerland;country;355;Suiza;CH;circle-flags:ch
+42;CHL;Chile;country;357;Chile;CL;circle-flags:cl
+43;CHN;China;country;353;China;CN;circle-flags:cn
+44;CIV;Cote d'Ivoire;country;352;Costa de Marfil;CI;circle-flags:ci
+45;CMR;Cameroon;country;352;Camerún;CM;circle-flags:cm
+46;COD;Congo (Democratic Republic of the);country;352;República Democrática del Congo;CD;circle-flags:cd
+47;COG;Congo;country;352;República del Congo;CG;circle-flags:cg
+49;COL;Colombia;country;357;Colombia;CO;circle-flags:co
+50;COM;Comoros;country;352;Comoras;KM;circle-flags:km
+51;CPV;Cabo Verde;country;352;Cabo Verde;CV;circle-flags:cv
+52;CRI;Costa Rica;country;356;Costa Rica;CR;circle-flags:cr
+54;CUB;Cuba;country;356;Cuba;CU;circle-flags:cu
+57;CYM;Cayman Islands;country;356;Islas Caimán;KY;circle-flags:ky
+58;CYP;Cyprus;country;353;Chipre;CY;circle-flags:cy
+59;CZE;Czech Republic;country;355;República Checa;CZ;circle-flags:cz
+61;DEU;Germany;country;355;Alemania;DE;circle-flags:de
+62;DJI;Djibouti;country;352;Yibuti;DJ;circle-flags:dj
+63;DMA;Dominica;country;356;Dominica;DM;circle-flags:dm
+64;DNK;Denmark;country;355;Dinamarca;DK;circle-flags:dk
+65;DOM;Dominican Republic;country;356;República Dominicana;DO;circle-flags:do
+66;DZA;Algeria;country;352;Argelia;DZ;circle-flags:dz
+67;ECU;Ecuador;country;357;Ecuador;EC;circle-flags:ec
+68;EGY;Egypt;country;352;Egipto;EG;circle-flags:eg
+69;ERI;Eritrea;country;352;Eritrea;ER;circle-flags:er
+71;ESP;Spain;country;355;España;ES;circle-flags:es
+72;EST;Estonia;country;355;Estonia;EE;circle-flags:ee
+73;ETH;Ethiopia;country;352;Etiopía;ET;circle-flags:et
+74;FIN;Finland;country;355;Finlandia;FI;circle-flags:fi
+75;FJI;Fiji;country;354;Fiyi;FJ;circle-flags:fj
+77;FRA;France;country;355;Francia;FR;circle-flags:fr
+78;FRO;Faroe Islands;country;355;Islas Feroe;FO;circle-flags:fo
+79;FSM;Micronesia;country;354;Micronesia;FM;circle-flags:fm
+80;GAB;Gabon;country;352;Gabón;GA;circle-flags:ga
+81;GBR;United Kingdom;country;355;Reino Unido;GB;circle-flags:gb
+82;GEO;Georgia;country;353;Georgia;GE;circle-flags:ge
+83;GHA;Ghana;country;352;Ghana;GH;circle-flags:gh
+84;GIB;Gibraltar;country;355;Gibraltar;GI;circle-flags:gi
+85;GIN;Guinea;country;352;Guinea;GN;circle-flags:gn
+87;GMB;Gambia;country;352;Gambia;GM;circle-flags:gm
+88;GNB;Guinea-Bissau;country;352;Guinea-Bissau;GW;circle-flags:gw
+89;GNQ;Equatorial Guinea;country;352;Guinea Ecuatorial;GQ;circle-flags:gq
+90;GRC;Greece;country;355;Grecia;GR;circle-flags:gr
+91;GRD;Grenada;country;356;Granada;GD;circle-flags:gd
+92;GRL;Greenland;country;355;Groenlandia;GL;circle-flags:gl
+93;GTM;Guatemala;country;356;Guatemala;GT;circle-flags:gt
+95;GUM;Guam;country;354;Guam;GU;circle-flags:gu
+96;GUY;Guyana;country;357;Guyana;GY;circle-flags:gy
+97;HKG;Hong Kong;country;353;Hong kong;HK;circle-flags:hk
+99;HND;Honduras;country;356;Honduras;HN;circle-flags:hn
+100;HRV;Croatia;country;355;Croacia;HR;circle-flags:hr
+101;HTI;Haiti;country;356;Haití;HT;circle-flags:ht
+102;HUN;Hungary;country;355;Hungría;HU;circle-flags:hu
+103;IDN;Indonesia;country;353;Indonesia;ID;circle-flags:id
+104;IND;India;country;353;India;IN;circle-flags:in
+106;IRL;Ireland;country;355;Irlanda;IE;circle-flags:ie
+107;IRN;Iran;country;353;Irán;IR;circle-flags:ir
+108;IRQ;Iraq;country;353;Irak;IQ;circle-flags:iq
+109;ISL;Iceland;country;355;Islandia;IS;circle-flags:is
+110;ISR;Israel;country;353;Israel;IL;circle-flags:il
+111;ITA;Italy;country;355;Italia;IT;circle-flags:it
+112;JAM;Jamaica;country;356;Jamaica;JM;circle-flags:jm
+113;JOR;Jordan;country;353;Jordania;JO;circle-flags:jo
+114;JPN;Japan;country;353;Japón;JP;circle-flags:jp
+115;KAZ;Kazakhstan;country;353;Kazajistán;KZ;circle-flags:kz
+116;KEN;Kenya;country;352;Kenia;KE;circle-flags:ke
+117;KGZ;Kyrgyzstan;country;353;Kirguistán;KG;circle-flags:kg
+118;KHM;Cambodia;country;353;Camboya;KH;circle-flags:kh
+119;KIR;Kiribati;country;354;Kiribati;KI;circle-flags:ki
+120;KNA;Saint Kitts and Nevis;country;356;San Cristóbal y Nieves;KN;circle-flags:kn
+121;KOR;South Korea;country;353;Corea del Sur;KR;circle-flags:kr
+122;KWT;Kuwait;country;353;Kuwait;KW;circle-flags:kw
+123;LAO;Laos;country;353;Laos;LA;circle-flags:la
+124;LBN;Lebanon;country;353;Líbano;LB;circle-flags:lb
+125;LBR;Liberia;country;352;Liberia;LR;circle-flags:lr
+126;LBY;Libya;country;352;Libia;LY;circle-flags:ly
+127;LCA;Saint Lucia;country;356;Santa Lucía;LC;circle-flags:lc
+128;LKA;Sri Lanka;country;353;Sri lanka;LK;circle-flags:lk
+129;LSO;Lesotho;country;352;Lesoto;LS;circle-flags:ls
+130;LTU;Lithuania;country;355;Lituania;LT;circle-flags:lt
+131;LUX;Luxembourg;country;355;Luxemburgo;LU;circle-flags:lu
+132;LVA;Latvia;country;355;Letonia;LV;circle-flags:lv
+133;MAC;Macao;country;353;Macao;MO;circle-flags:mo
+134;MAR;Morocco;country;352;Marruecos;MA;circle-flags:ma
+135;MDA;Moldova;country;355;Moldavia;MD;circle-flags:md
+136;MDG;Madagascar;country;352;Madagascar;MG;circle-flags:mg
+137;MDV;Maldives;country;353;Islas Maldivas;MV;circle-flags:mv
+138;MEX;Mexico;country;359;México;MX;circle-flags:mx
+139;MHL;Marshall Islands;country;354;Islas Marshall;MH;circle-flags:mh
+140;MKD;North Macedonia;country;355;Macedônia;MK;circle-flags:mk
+141;MLI;Mali;country;352;Mali;ML;circle-flags:ml
+142;MLT;Malta;country;355;Malta;MT;circle-flags:mt
+143;MMR;Myanmar;country;353;Birmania;MM;circle-flags:mm
+144;MNE;Montenegro;country;355;Montenegro;ME;circle-flags:me
+145;MNG;Mongolia;country;353;Mongolia;MN;circle-flags:mn
+146;MNP;Northern Mariana Islands;country;354;Islas Marianas del Norte;MP;circle-flags:mp
+147;MOZ;Mozambique;country;352;Mozambique;MZ;circle-flags:mz
+148;MRT;Mauritania;country;352;Mauritania;MR;circle-flags:mr
+151;MUS;Mauritius;country;352;Mauricio;MU;circle-flags:mu
+152;MWI;Malawi;country;352;Malawi;MW;circle-flags:mw
+153;MYS;Malaysia;country;353;Malasia;MY;circle-flags:my
+155;NAM;Namibia;country;352;Namibia;;circle-flags:na
+156;NCL;New Caledonia;country;354;Nueva Caledonia;NC;circle-flags:nc
+157;NER;Niger;country;352;Niger;NE;circle-flags:ne
+159;NGA;Nigeria;country;352;Nigeria;NG;circle-flags:ng
+160;NIC;Nicaragua;country;356;Nicaragua;NI;circle-flags:ni
+162;NLD;Netherlands;country;355;Países Bajos;NL;circle-flags:nl
+163;NOR;Norway;country;355;Noruega;NO;circle-flags:no
+164;NPL;Nepal;country;353;Nepal;NP;circle-flags:np
+165;NRU;Nauru;country;354;Nauru;NR;circle-flags:nr
+166;NZL;New Zealand;country;354;Nueva Zelanda;NZ;circle-flags:nz
+167;OMN;Oman;country;353;Omán;OM;circle-flags:om
+168;PAK;Pakistan;country;353;Pakistán;PK;circle-flags:pk
+169;PAN;Panama;country;356;Panamá;PA;circle-flags:pa
+173;PER;Peru;country;357;Perú;PE;circle-flags:pe
+174;PHL;Philippines;country;353;Filipinas;PH;circle-flags:ph
+175;PLW;Palau;country;354;Palau;PW;circle-flags:pw
+176;PNG;Papua New Guinea;country;354;Papúa Nueva Guinea;PG;circle-flags:pg
+177;POL;Poland;country;355;Polonia;PL;circle-flags:pl
+178;PRK;North Korea;country;353;Corea del Norte;KP;circle-flags:kp
+179;PRT;Portugal;country;355;Portugal;PT;circle-flags:pt
+180;PRY;Paraguay;country;357;Paraguay;PY;circle-flags:py
+181;PSE;Palestine;country;353;Palestina;PS;circle-flags:ps
+182;PYF;French Polynesia;country;354;Polinesia Francesa;PF;circle-flags:pf
+183;QAT;Qatar;country;353;Qatar;QA;circle-flags:qa
+185;ROU;Romania;country;355;Rumanía;RO;circle-flags:ro
+186;RUS;Russian Federation;country;355;Rusia;RU;circle-flags:ru
+187;RWA;Rwanda;country;352;Ruanda;RW;circle-flags:rw
+188;SAU;Saudi Arabia;country;353;Arabia Saudita;SA;circle-flags:sa
+190;SDN;Sudan;country;352;Sudán;SD;circle-flags:sd
+191;SEN;Senegal;country;352;Senegal;SN;circle-flags:sn
+192;SGP;Singapore;country;353;Singapur;SG;circle-flags:sg
+195;SLB;Solomon Islands;country;354;Islas Salomón;SB;circle-flags:sb
+196;SLE;Sierra Leone;country;352;Sierra Leona;SL;circle-flags:sl
+197;SLV;El Salvador;country;356;El Salvador;SV;circle-flags:sv
+198;SMR;San Marino;country;355;San Marino;SM;circle-flags:sm
+199;SOM;Somalia;country;352;Somalia;SO;circle-flags:so
+201;SRB;Serbia;country;355;Serbia;RS;circle-flags:rs
+202;SSD;South Sudan;country;352;República de Sudán del Sur;SS;circle-flags:ss
+203;STP;Sao Tome and Principe;country;352;Santo Tomé y Príncipe;ST;circle-flags:st
+205;SUR;Suriname;country;357;Surinám;SR;circle-flags:sr
+206;SVK;Slovakia;country;355;Eslovaquia;SK;circle-flags:sk
+207;SVN;Slovenia;country;355;Eslovenia;SI;circle-flags:si
+208;SWE;Sweden;country;355;Suecia;SE;circle-flags:se
+209;SWZ;Eswatini;country;352;Swazilandia;SZ;circle-flags:sz
+211;SYC;Seychelles;country;352;Seychelles;SC;circle-flags:sc
+212;SYR;Syrian Arab Republic;country;353;Siria;SY;circle-flags:sy
+213;TCA;Turks and Caicos Islands;country;356;Islas Turcas y Caicos;TC;circle-flags:tc
+214;TCD;Chad;country;352;Chad;TD;circle-flags:td
+215;TGO;Togo;country;352;Togo;TG;circle-flags:tg
+216;THA;Thailand;country;353;Tailandia;TH;circle-flags:th
+217;TJK;Tajikistan;country;353;Tayikistán;TJ;circle-flags:tj
+219;TKM;Turkmenistan;country;353;Turkmenistán;TM;circle-flags:tm
+220;TLS;Timor-Leste;country;353;Timor Oriental;TL;circle-flags:tl
+221;TON;Tonga;country;354;Tonga;TO;circle-flags:to
+222;TTO;Trinidad and Tobago;country;356;Trinidad y Tobago;TT;circle-flags:tt
+223;TUN;Tunisia;country;352;Tunez;TN;circle-flags:tn
+224;TUR;Turkey;country;353;Turquía;TR;circle-flags:tr
+225;TUV;Tuvalu;country;354;Tuvalu;TV;circle-flags:tv
+226;TZA;Tanzania;country;352;Tanzania;TZ;circle-flags:tz
+227;UGA;Uganda;country;352;Uganda;UG;circle-flags:ug
+228;UKR;Ukraine;country;355;Ucrania;UA;circle-flags:ua
+230;URY;Uruguay;country;357;Uruguay;UY;circle-flags:uy
+231;USA;United States of America;country;359;Estados Unidos de América;US;circle-flags:us
+232;UZB;Uzbekistan;country;353;Uzbekistán;UZ;circle-flags:uz
+234;VCT;Saint Vincent and the Grenadines;country;356;San Vicente y las Granadinas;VC;circle-flags:vc
+236;VEN;Venezuela;country;357;Venezuela;VE;circle-flags:ve
+237;VGB;Virgin Islands (British);country;356;Islas Vírgenes Británicas;VG;circle-flags:vg
+238;VIR;Virgin Islands (U.S.);country;356;Islas Vírgenes de los Estados Unidos;VI;circle-flags:vi
+239;VNM;Vietnam;country;353;Vietnam;VN;circle-flags:vn
+240;VUT;Vanuatu;country;354;Vanuatu;VU;circle-flags:vu
+242;WSM;Samoa;country;354;Samoa;WS;circle-flags:ws
+243;YEM;Yemen;country;353;Yemen;YE;circle-flags:ye
+246;ZAF;South Africa;country;352;Sudáfrica;ZA;circle-flags:za
+247;ZMB;Zambia;country;352;Zambia;ZM;circle-flags:zm
+248;ZWE;Zimbabwe;country;352;Zimbabue;ZW;circle-flags:zw
+352;1;Africa;region;9999;Africa;0;circle-flags:
+353;2;Asia;region;9999;Asia;0;circle-flags:
+354;3;Oceania;region;9999;Oceania;0;circle-flags:
+355;4;Europe;region;9999;Europa;0;circle-flags:
+359;5;North America;region;9999;Norteamerica;0;circle-flags:
+357;6;South America;region;9999;Sudamerica;0;circle-flags:
+358;7;Other;region;9999;Otros;0;circle-flags:
+356;8;Central America;region;9999;Centroamerica y Caribe;0;circle-flags:
