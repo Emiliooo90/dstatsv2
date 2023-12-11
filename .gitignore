@@ -7,5 +7,3 @@ venv
 .venv
 
 dstatsr/__pycache__
-
-dstatsr/templates/base_old.html

@@ -10,6 +10,5 @@
   Hola! vienes del país {{ cod_pais }}
 </p>
 <canvas id="myChart" style="max-width: 40vw; max-height: 40vh;"></canvas>
-{{data|tojson}}
 <script id="myChart_script" src="{{ url_for('static', filename='js/first_plot.js') }}"></script>
 {% endblock %}

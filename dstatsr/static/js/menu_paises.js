@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-	const defaultContinentButton = document.querySelector('.btn-group .btn.active');
+	const defaultContinentButton = document.querySelector('.btn-group-cont .btn.active');
 	const paisesContainer = document.getElementById('menu-paises');
 	const selectedContinent = defaultContinentButton.getAttribute('data-cont');
 	const paisesSeleccionados = paisesPorContinente[selectedContinent];
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	renderPaises(paisesSeleccionados, paisesContainer);
 });
 
-const buttons = document.querySelectorAll('.btn-group .btn');
+const buttons = document.querySelectorAll('.btn-group-cont .btn');
 buttons.forEach(function(button) {
 	button.addEventListener('click', function() {
 		const selectedContinent = this.getAttribute('data-cont');
@@ -28,7 +28,7 @@ buttons.forEach(function(button) {
 });
 
 function renderPaises(paises, container) {
-    const defaultContinentButton = document.querySelector('.btn-group .btn.active');
+    const defaultContinentButton = document.querySelector('.btn-group-cont .btn.active');
     const selectedContinent = defaultContinentButton.getAttribute('data-cont');
 	//container.innerHTML = `<h2>Países en el continente de ${selectedContinent}</h2>`;
 	const divContainer = document.createElement('div');

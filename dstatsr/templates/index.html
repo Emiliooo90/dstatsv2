@@ -68,18 +68,20 @@
     <div class="row justify-content-center">
         <div class="col-8">
             <h1 class="section-header text-center">Productos más comerciado</h1>
-            <div>Selector</div>
-            <div>Gráfico</div>
+            <div id="selector-level" class="btn-group-level" role="group" aria-label="Levels">
+                <button type="button" data-cont="2digit" class="btn btn-secondary active">HS2</button>
+                <button type="button" data-cont="4digit" class="btn btn-secondary">HS4</button>
+            </div>  
+            <div id='levelOutput'></div>
             <canvas id="rkg_Chart" style="max-width: 40vw; max-height: 40vh;"></canvas>
         </div>
     </div>
     <div class="separador" id="seccion_perfil"></div>
     <div class="row justify-content-center">
-        <div class="col-8">
+        <div class="col-10">
             <h1 class="section-header text-center">Perfil del País</h1>
             <h2 class="bajada text-center">Explora las principales cifras e indicadores por país</h2>
-        <div class="col-8">
-            <div id="selector-continente" class="btn-group" role="group" aria-label="Continentes">
+            <div id="selector-continente" class="btn-group-cont d-flex justify-content-center" role="group" aria-label="Continentes">
                 <button type="button" data-cont=352 class="btn btn-secondary active">Africa</button>
                 <button type="button" data-cont=353 class="btn btn-secondary">Asia</button>
                 <button type="button" data-cont=354 class="btn btn-secondary">Oceania</button>
