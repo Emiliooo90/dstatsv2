@@ -53,39 +53,3 @@ function renderLevel(level,container) {
         }
     });
 };
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     var ctx = document.getElementById('rkg_Chart').getContext('2d');
-
-//     var filteredData = rkg_data.filter(item => item.level === "2digit");
-
-//     var labels = filteredData.map(item => item.hs_product_name_short_en);
-//     var Data = filteredData.map(item => parseFloat(item.trade_value));
-
-//     var barChart = new Chart(ctx, {
-//         type: 'bar',
-//         data: {
-//             labels: labels,
-//             datasets: [{
-//                 label: 'Trade Value',
-//                 data: Data,
-//                 backgroundColor: 'rgba(54, 162, 235, 0.6)',
-//                 borderColor: 'rgba(54, 162, 235, 1)',
-//                 borderWidth: 1
-//             }]
-//         },
-//         options: {
-//             indexAxis: 'y',
-//             responsive: true,
-//             maintainAspectRatio: false,
-//             scales: {
-//                 yAxes: [{
-//                     ticks: {
-//                         beginAtZero: true
-//                     }
-//                 }]
-//             }
-//         }
-//     });
-// });
-
