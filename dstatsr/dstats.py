@@ -2,8 +2,7 @@ from flask import Blueprint, render_template
 import requests
 import pandas as pd
 import json
-
-from dstatsr.modules.data_mod import data_ImpByLoc
+import plotly.graph_objects as go
 
 bp = Blueprint('dstats', __name__, url_prefix="/dstats")
 
@@ -50,10 +49,12 @@ def index():
 
 @bp.route("/perfil/<cod_pais>")
 def perfil(cod_pais):
-    response = requests.get(f'http://127.0.0.1:5050/api/imp_by_loc/{cod_pais}')
+    imex_data = requests.get(f'http://127.0.0.1:5050/api/imexPais/{cod_pais}')
+    impByLoc_data = requests.get(f'http://127.0.0.1:5050/api/impByLoc/{cod_pais}')
     return render_template("perfil.html",
                            cod_pais = cod_pais,
-                           data = response.json())
+                           data1 = imex_data.json(),
+                           data2 = impByLoc_data.json())
 
 @bp.route("/markets/<mkt>")
 def markets(mkt):

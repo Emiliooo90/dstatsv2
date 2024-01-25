@@ -2,13 +2,140 @@
 {% block title %}Perfil país{% endblock %}
 
 {% block content %}
-<script>
-  jsonData1 = {{data|tojson}};
-</script>
-<h1>Perfil país</h1>
-<p>
-  Hola! vienes del país {{ cod_pais }}
-</p>
-<canvas id="myChart" style="max-width: 40vw; max-height: 40vh;"></canvas>
-<script id="myChart_script" src="{{ url_for('static', filename='js/first_plot.js') }}"></script>
+
+<div class="container">
+  <div class="align-items-center justify-content-center row">
+    <div class="col-auto">FLAG</div>
+    <div class="col-auto">
+      <h1 class="main-header">country_name</h1>
+    </div>
+  </div>
+  
+  <div class="justify-content-center row">
+    <h3 class="titulo text-center">Fact number 1</h3>
+    <h2 class="bajada text-center">Fact number 2</h2>
+    <h2 class="bajada text-center">Fact number 3</h2>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 mb-3">
+        <div class="card text-center border-light fact-card">
+            <div class="card-body" style="padding: 40px 16px;">
+                <h3 class="titulo">Card</h3>
+                <h3 class="dato">number</h3>
+                <p class="specialText2">description</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card text-center border-light fact-card">
+            <div class="card-body" style="padding: 40px 16px;">
+                <h3 class="titulo">Card</h3>
+                <h3 class="dato">number</h3>
+                <p class="specialText2">description</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card text-center border-light fact-card">
+            <div class="card-body" style="padding: 40px 16px;">
+              <h3 class="titulo">Card</h3>
+              <h3 class="dato">number</h3>
+              <p class="specialText2">description</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card text-center border-light fact-card">
+            <div class="card-body" style="padding: 40px 16px;">
+              <h3 class="titulo">Card</h3>
+              <h3 class="dato">number</h3>
+              <p class="specialText2">description</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="separador"></div>
+  <div class="row justify-content-center">
+    <div class="col-8">
+        <h1 class="section-header text-center">Intercambio de productos</h1>
+        <div id="selector-tipo" class="btn-group-tipo d-flex justify-content-center" role="group" aria-label="Tipos">
+            <button type="button" data-cont="importaciones" class="btn btn-secondary active">Importaciones</button>
+            <button type="button" data-cont="exportaciones" class="btn btn-secondary">Exportaciones</button>
+        </div>  
+        <div class="separador"></div>
+        <div>Texto descriptivo</div>
+        <div id='tipoOutput'></div>
+        <div id="imex_Chart" style="max-width: 40vw; max-height: 40vh;"></div>
+    </div>
+  </div>
+  <div class="separador"></div>
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <h1 class="section-header text-center">Indice de complejidad económica</h1> 
+      <div class="separador"></div>
+      <div>Texto descriptivo</div>
+      <div id="ice_Chart" style="max-width: 40vw; max-height: 40vh;"></div>
+    </div>
+  </div>
+
+  <div class="separador"></div>
+
+  <div class="justify-content-center row">
+    <div class="align-self-center col-lg-3 col-sm-8 col-10">
+      <div class="row">
+        <h1 class="section-header">Principales destinos de exportaciones</h1>
+      </div>
+      <div class="separador"></div>
+      <p class="desc-text">texto-descriptivo</p>
+    </div>
+    <div class="align-self-center col-lg-6 col-sm-8 col-10">
+      <div id="dest_Chart" class="row"></div>
+      <div class="container mt-1">
+        <input type="range" class="custom-range" id="rangoAñosDest" min="2016" max="2021" step="1" value="2021">
+        <div class="tick-labels">
+          <label>2016</label>
+          <label>2017</label>
+          <label>2018</label>
+          <label>2019</label>
+          <label>2020</label>
+          <label>2021</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="separador"></div>
+
+  <div class="justify-content-center row">
+    <div class="align-self-center col-lg-6 col-sm-8 col-10">
+      <div id="ori_Chart" class="row"></div>
+      <div class="container mt-1">
+        <input type="range" class="custom-range" id="rangoAñosOri" min="2016" max="2021" step="1" value="2021">
+        <div class="tick-labels">
+          <label>2016</label>
+          <label>2017</label>
+          <label>2018</label>
+          <label>2019</label>
+          <label>2020</label>
+          <label>2021</label>
+        </div>
+      </div>
+    </div>
+    <div class="align-self-center col-lg-3 col-sm-8 col-10">
+      <div class="row">
+        <h1 class="section-header">Principales origenes de exportaciones</h1>
+      </div>
+      <div class="separador"></div>
+      <p class="desc-text">texto-descriptivo</p>
+    </div>
+  </div>
+
+</div>
+
+<script> const pais = `{{ cod_pais }}`; </script>
+<script src="{{url_for('static', filename='js/plot_treemap.js')}}"></script>
+<script src="{{url_for('static', filename='js/plot_destino.js')}}"></script>
+<script src="{{url_for('static', filename='js/plot_origenes.js')}}"></script>
+
 {% endblock %}

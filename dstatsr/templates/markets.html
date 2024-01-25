@@ -2,6 +2,76 @@
 {% block title %}Markets{% endblock %}
 
 {% block content %}
-    <h1>Markets</h1>
-    <p>Hola, vienes a ver el mercado {{mkt}}</p>
+<div class="container">
+    <h1 class="main-header text-center">Análisis de mercado</h1>
+    <div class="justify-content-center row">
+        <div class="col-7">
+            <h2 class="section-header text-center">Hola, vienes a ver el mercado {{mkt}}</p>
+        </div>
+    </div>
+    <div class="justify-content-center row">
+        <div class="col-md-3 mb-3">
+            <div class="card text-center border-light fact-card">
+                <div class="card-body" style="padding: 40px 16px;">
+                    <h3 class="titulo">Card</h3>
+                    <h3 class="dato">number</h3>
+                    <p class="specialText2">description</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="card text-center border-light fact-card">
+                <div class="card-body" style="padding: 40px 16px;">
+                    <h3 class="titulo">Card</h3>
+                    <h3 class="dato">number</h3>
+                    <p class="specialText2">description</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="separador"></div>
+
+    <div class="justify-content-center row">
+        <div class="align-self-center col-lg-6 col-sm-8 col-10">
+          <div class="row">grafico</div>
+        </div>
+        <div class="align-self-center col-lg-3 col-sm-8 col-10">
+          <div class="row">
+            <h1 class="section-header">Principales actores</h1>
+          </div>
+          <div class="separador"></div>
+          <p class="desc-text">texto-descriptivo</p>
+        </div>
+    </div>
+
+    <div class="separador"></div>
+
+    <div class="justify-content-center row">
+        <div class="align-self-center col-lg-3 col-sm-8 col-10">
+          <div class="row">
+            <h1 class="section-header">Tendencia global</h1>
+          </div>
+          <div class="separador"></div>
+          <p class="desc-text">texto-descriptivo</p>
+        </div>
+        <div class="align-self-center col-lg-6 col-sm-8 col-10">
+          <div class="row">grafico</div>
+          <div class="row">selector</div>
+        </div>
+    </div>
+
+    <div class="separador"></div>
+
+    <div class="row justify-content-center">
+        <div class="col-10">
+            <h1 class="section-header text-center">Indice de complejidad económica</h1>
+            <h2 class="bajada text-center">De las categorías dentro del capítulo {{mkt}}</h2> 
+            <div class="separador"></div>
+            <p class="desc-text text-center">texto-descriptivo</p>
+            <div>Tabla</div>
+    </div>
+
+</div>
+
 {% endblock %}

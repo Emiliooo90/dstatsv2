@@ -80,7 +80,7 @@ p.desc-text {
 p.specialText2 {
     font-family: "Ubuntu", sans-serif;
     font-style: normal;
-    font-size: 10px;
+    font-size: 12px;
     color: #333333;
 }
 
@@ -129,3 +129,25 @@ div.separador {
 .menu-pais-link {
     text-decoration: none;
 }
+
+.custom-range {
+    width: 100%;
+  }
+
+  .custom-range::-moz-range-thumb {
+    background-color: #007bff; /* Color del pulgar (thumb) en Firefox */
+  }
+
+  .custom-range::-webkit-slider-thumb {
+    background-color: #007bff; /* Color del pulgar (thumb) en WebKit/Blink */
+  }
+
+  .custom-range::-ms-thumb {
+    background-color: #007bff; /* Color del pulgar (thumb) en IE/Edge */
+  }
+
+  .tick-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }

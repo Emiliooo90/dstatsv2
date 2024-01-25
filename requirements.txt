@@ -3,3 +3,9 @@ flask
 requests
 
 flask_cors
+
+psycopg2
+
+pandas
+
+plotly

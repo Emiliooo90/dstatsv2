@@ -7,3 +7,5 @@ venv
 .venv
 
 dstatsr/__pycache__
+
+dstatsr/modules
