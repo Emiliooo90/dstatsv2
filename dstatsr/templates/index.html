@@ -104,22 +104,27 @@
             <h1 class="section-header text-center">Markets</h1>
             <h2 class="bajada text-center">Analiza las grandes tendencias de consumo globales</h2>
             <div>Selector markets</div>
-            {% for mkt in listado_markets %}
-            <li><a href="{{ url_for('dstats.markets', mkt=mkt) }}">
-                {{ mkt }}
-            </a>
-            </li>
-            {% endfor %}
+            <div class="row">
+                <div class="col-lg-4 col-sm-11" style="margin-top: 25px; min-height: 300px;">
+                    <select id="mktSelector" class="form-select" onchange="actualizarLista()">
+                        <option selected>Categoría de productos</option>
+                        {% for seccion in secciones %}
+                        <option value="{{ seccion }}">{{ seccion }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div id="mkt_links" class="col-lg-8 col-sm-11" style="margin-top: 25px;">
+                    <ul id="lista-enlaces"></ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<script>
-    const paisesPorContinente = JSON.parse({{ listado_pais_cont | tojson }});
-</script>
-<script>
-    const rkg_data = JSON.parse({{ rkg_data | tojson }});
-</script>
+<script> const paisesPorContinente = JSON.parse({{ listado_pais_cont | tojson }}); </script>
+<script> const rkg_data = JSON.parse({{ rkg_data | tojson }}); </script>
 <script src="{{url_for('static', filename='js/menu_paises.js')}}"></script>
 <script src="{{url_for('static', filename='js/plot_rkg.js')}}"></script>
 <script src="{{url_for('static', filename='js/plot_world.js')}}"></script>
+<script src="{{url_for('static', filename='js/menu_markets.js')}}"></script>
+
 {% endblock %}

@@ -56,8 +56,7 @@
           <p class="desc-text">texto-descriptivo</p>
         </div>
         <div class="align-self-center col-lg-6 col-sm-8 col-10">
-          <div class="row">grafico</div>
-          <div class="row">selector</div>
+          <div id="trend_Chart" class="row"></div>
         </div>
     </div>
 
@@ -73,5 +72,8 @@
     </div>
 
 </div>
+
+<script> const mkt = `{{ mkt }}`; </script>
+<script src="{{url_for('static', filename='js/plot_trend.js')}}"></script>
 
 {% endblock %}

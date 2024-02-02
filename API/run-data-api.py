@@ -66,6 +66,20 @@ def execute_expByLoc(pais):
     finally:
         connection.close()
 
+def execute_totalFlowByProd(mkt):
+    connection = psycopg2.connect(**db_config)
+    try:
+        with connection.cursor() as cursor:
+            query = f'''
+            SELECT * FROM hs_total_flow_by_prod WHERE hs_product_code ='{mkt}';
+            '''
+            cursor.execute(query)
+            results = cursor.fetchall()
+            columns = [column[0] for column in cursor.description]
+            return results, columns
+    finally:
+        connection.close()
+
 @app.route('/api/imexPais/<pais>', methods=['GET'])
 def buscar_imexPais(pais):
     results, columns = execute_imexPais(pais)
@@ -219,6 +233,62 @@ def plot_origenes(pais,ano):
     fig.update_layout(        
         **kwargs_layout
         )
+
+    return fig.to_json()
+
+@app.route('/api/contenido/mkt/s2_trend/<mkt>')
+def plot_trend(mkt):
+    results, columns = execute_totalFlowByProd(mkt)
+    datos = {
+            "Año": [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021],
+            "Valor": [34711910919308, 35453920214700, 35541220667860, 30746280718776, 
+                    30000535759620, 33140332407652, 36469071019274, 36578967316688, 
+                    34090552417362, 42947577718464]
+            }
+
+    world_trend_data = pd.DataFrame(datos)
+    trend_data = pd.DataFrame(results, columns=columns)
+
+    fig = go.Figure()
+
+    fig.add_trace(
+        go.Scatter(
+            x = trend_data.year,
+            y = trend_data.total_flow,
+            marker_color = '#023e8a',
+            marker_line_color='#03045e',
+            yaxis='y',
+            showlegend=True,
+            name = 'Mercado'
+        )
+    )
+    fig.add_trace(
+        go.Scatter(
+            x = world_trend_data.Año,
+            y = world_trend_data.Valor,
+            marker_color = '#fcbf49',
+            marker_line_color='#e76f51',
+            yaxis='y2',
+            showlegend=True,
+            name = 'Mundial'
+        )
+    )
+    fig.update_layout(
+        xaxis=dict(showgrid=False), 
+        yaxis=dict(title='Mercado', showgrid=False),
+        yaxis2=dict(title='Mundial', overlaying='y', side='right'),
+        margin=dict(t=0, l=0, r=0, b=0),
+        plot_bgcolor='rgba(0, 0, 0,0)',
+        hovermode='x unified',
+        height=350,
+        legend_title_text='Tendencia',
+        legend=dict(orientation='h')
+    )
+    fig.update_traces(
+        marker_line_width=2,
+        line_width=3,
+        marker_size=7       
+    )
 
     return fig.to_json()
 

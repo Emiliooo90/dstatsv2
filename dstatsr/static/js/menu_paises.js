@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 const buttons = document.querySelectorAll('.btn-group-cont .btn');
+
 buttons.forEach(function(button) {
 	button.addEventListener('click', function() {
 		const selectedContinent = this.getAttribute('data-cont');

@@ -3,6 +3,7 @@ import requests
 import pandas as pd
 import json
 import plotly.graph_objects as go
+import csv
 
 bp = Blueprint('dstats', __name__, url_prefix="/dstats")
 
@@ -41,11 +42,15 @@ def index():
 
     json_rkg_data = product_rkg_data.to_json(orient="records")
 
-    listado_markets = ['01','02','03']
+    with open('dstatsr/static/csv/categorias_hs.csv','r',encoding='latin1') as file:
+        reader = csv.DictReader(file, delimiter=';')
+        data = [row for row in reader]
+        secciones = set(row.get('nombre_seccion','') for row in data)
+
     return render_template("index.html",
                             rkg_data=json_rkg_data,
                             listado_pais_cont=json_pais_cont,
-                            listado_markets=listado_markets)
+                            secciones=secciones)
 
 @bp.route("/perfil/<cod_pais>")
 def perfil(cod_pais):
