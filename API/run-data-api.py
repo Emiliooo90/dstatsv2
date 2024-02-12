@@ -9,11 +9,11 @@ CORS(app)
 
 # Configuración de la conexión a la base de datos
 db_config = {
-    "dbname":"harvard_v_1_2",
-    "user":"postgres",
-    "password":"masterdiego",
-    "host":"127.0.0.1",
-    "port":"5433",
+    "dbname":" ",
+    "user":" ",
+    "password":" ",
+    "host":" ",
+    "port":" ",
 }
 
 def execute_imexPais(pais):
