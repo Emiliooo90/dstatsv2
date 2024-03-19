@@ -1,19 +1,22 @@
-from flask import Flask, jsonify
+from flask import Flask, request, jsonify
 from flask_cors import CORS
+from bs4 import BeautifulSoup
 import psycopg2
 import pandas as pd
 import plotly.graph_objects as go
+import json
+import requests
 
 app = Flask(__name__)
 CORS(app)
 
 # Configuración de la conexión a la base de datos
 db_config = {
-    "dbname":" ",
-    "user":" ",
-    "password":" ",
-    "host":" ",
-    "port":" ",
+    "dbname":"datasur_harvard12",
+    "user":"datasur_dstats",
+    "password":"D3s4rr0ll023#.!",
+    "host":"cpanel02.datasur.com",
+    "port":"5432",
 }
 
 def execute_imexPais(pais):
@@ -291,6 +294,35 @@ def plot_trend(mkt):
     )
 
     return fig.to_json()
+
+@app.route('/api/v2/translate', methods=['POST'])
+def translate():
+    text = request.json.get('text')
+    if not text:
+        return jsonify({'error': 'No text provided'}), 400
+
+    headers = {
+        'Authorization': 'DeepL-Auth-Key 8ce4c09e-72c1-491b-8a74-977593f1ea23:fx',
+        'Content-Type': 'application/json',
+    }
+
+    data = {
+        'text': [text],
+        'target_lang': 'DE',
+    }
+
+    response = requests.post(
+        'https://api-free.deepl.com/v2/translate',
+        headers=headers,
+        data=json.dumps(data),
+    )
+
+    if response.status_code != 200:
+        return jsonify({'error': 'Translation failed'}), 500
+
+    translated_text = response.json()['translations'][0]['text']
+    return jsonify({'translated_text': translated_text})
+
 
 if __name__ == '__main__':
     app.run(debug=True,host='127.0.0.1', port=5050)

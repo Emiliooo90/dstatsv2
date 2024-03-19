@@ -58,10 +58,12 @@
     <div class="row justify-content-center">
         <div class="col-8">
             <h1 class="section-header text-center">El comercio mundial</h1>
-            <div id="selector-tipo" class="btn-group-tipo d-flex justify-content-center" role="group" aria-label="Tipos">
-                <button type="button" data-cont="importaciones" class="btn btn-secondary active">Importadoras</button>
-                <button type="button" data-cont="exportaciones" class="btn btn-secondary">Exportadoras</button>
-            </div>  
+            <div id="selector-tipo" class="btn-group-tipo d-flex justify-content-center" role="group"
+                aria-label="Tipos">
+                <button type="button" data-cont="importaciones"
+                    class="btn btn-secondary active me-3">Importadoras</button>
+                <button type="button" data-cont="exportaciones" class="btn btn-secondary ms-3">Exportadoras</button>
+            </div>
             <div class="separador"></div>
             <div>Texto descriptivo</div>
             <div id='tipoOutput'></div>
@@ -72,10 +74,11 @@
     <div class="row justify-content-center">
         <div class="col-8">
             <h1 class="section-header text-center">Productos más comerciados</h1>
-            <div id="selector-level" class="btn-group-level d-flex justify-content-center" role="group" aria-label="Levels">
-                <button type="button" data-cont="2digit" class="btn btn-secondary active">HS2</button>
-                <button type="button" data-cont="4digit" class="btn btn-secondary">HS4</button>
-            </div>  
+            <div id="selector-level" class="btn-group-level d-flex justify-content-center" role="group"
+                aria-label="Levels">
+                <button type="button" data-cont="2digit" class="btn btn-secondary active me-3">HS2</button>
+                <button type="button" data-cont="4digit" class="btn btn-secondary ms-3">HS4</button>
+            </div>
             <div id='levelOutput'></div>
             <canvas id="rkg_Chart" style="max-width: 40vw; max-height: 40vh;"></canvas>
         </div>
@@ -85,40 +88,49 @@
         <div class="col-10">
             <h1 class="section-header text-center">Perfil del País</h1>
             <h2 class="bajada text-center">Explora las principales cifras e indicadores por país</h2>
-            <div id="selector-continente" class="btn-group-cont d-flex justify-content-center" role="group" aria-label="Continentes">
-                <button type="button" data-cont=352 class="btn btn-secondary active">Africa</button>
-                <button type="button" data-cont=353 class="btn btn-secondary">Asia</button>
-                <button type="button" data-cont=354 class="btn btn-secondary">Oceania</button>
-                <button type="button" data-cont=355 class="btn btn-secondary">Europa</button>
-                <button type="button" data-cont=359 class="btn btn-secondary">Norteamérica</button>
-                <button type="button" data-cont=357 class="btn btn-secondary">Sudamérica</button>
-                <button type="button" data-cont=356 class="btn btn-secondary">Centroamérica</button>
-            </div>        
+            <div id="selector-continente" class="btn-group-cont d-flex justify-content-center" role="group"
+                aria-label="Continentes">
+                <button type="button" data-cont=352 class="btn btn-secondary active me-3">Africa</button>
+                <button type="button" data-cont=353 class="btn btn-secondary mx-3">Asia</button>
+                <button type="button" data-cont=354 class="btn btn-secondary mx-3">Oceania</button>
+                <button type="button" data-cont=355 class="btn btn-secondary mx-3">Europa</button>
+                <button type="button" data-cont=359 class="btn btn-secondary mx-3">Norteamérica</button>
+                <button type="button" data-cont=357 class="btn btn-secondary mx-3">Sudamérica</button>
+                <button type="button" data-cont=356 class="btn btn-secondary ms-3">Centroamérica</button>
+            </div>
         </div>
-            <div id="menu-paises"></div>
-        </div>
+        <div id="menu-paises" style="margin-top: 10px;"></div>
     </div>
-    <div class="separador" id="seccion_markets"></div>
-    <div class="row justify-content-center">
-        <div class="col-8">
-            <h1 class="section-header text-center">Markets</h1>
-            <h2 class="bajada text-center">Analiza las grandes tendencias de consumo globales</h2>
-            <div>Selector markets</div>
-            <div class="row">
-                <div class="col-lg-4 col-sm-11" style="margin-top: 25px; min-height: 300px;">
-                    <select id="mktSelector" class="form-select" onchange="actualizarLista()">
-                        <option selected>Categoría de productos</option>
-                        {% for seccion in secciones %}
-                        <option value="{{ seccion }}">{{ seccion }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <div id="mkt_links" class="col-lg-8 col-sm-11" style="margin-top: 25px;">
-                    <ul id="lista-enlaces"></ul>
-                </div>
+</div>
+<div class="separador" id="seccion_markets"></div>
+<div class="row justify-content-center">
+    <div class="col-8">
+        <h1 class="section-header text-center">Markets</h1>
+        <h2 class="bajada text-center">Analiza las grandes tendencias de consumo globales</h2>
+        <div class="row mt-3">
+            <div><b>Selecciona una familia de productos</b></div>
+            <div class="col-lg-4 col-sm-11" style="min-height: 300px;">
+                <select id="mktSelector" class="form-select" onchange="actualizarLista()">
+                    <option selected>Categoría de productos</option>
+                    {% for seccion in secciones %}
+                    <option value="{{ seccion }}">{{ seccion }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div id="mkt_links" class="col-lg-8 col-sm-11" style="margin-top: 25px;">
+                <ul id="lista-enlaces"
+                    class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover">
+                </ul>
             </div>
         </div>
     </div>
+    <button id="arrow_up" onclick="scrollToTop()" title="Volver arriba">
+        <img src="/static/img/arrow_up.png" alt="Flecha hacia arriba">
+    </button>
+
+    <!--
+    <button id="translate-button">Traducir</button>
+    -->
 </div>
 <script> const paisesPorContinente = JSON.parse({{ listado_pais_cont | tojson }}); </script>
 <script> const rkg_data = JSON.parse({{ rkg_data | tojson }}); </script>
@@ -126,5 +138,7 @@
 <script src="{{url_for('static', filename='js/plot_rkg.js')}}"></script>
 <script src="{{url_for('static', filename='js/plot_world.js')}}"></script>
 <script src="{{url_for('static', filename='js/menu_markets.js')}}"></script>
+<script src="{{url_for('static', filename='js/arrow_up_button.js')}}"></script>
+<script src="{{url_for('static', filename='js/api_translate.js')}}"></script>
 
 {% endblock %}
